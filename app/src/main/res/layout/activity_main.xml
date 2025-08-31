@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e9eb"
+    android:background="#F8FBD0"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="243dp"
         android:layout_height="28dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="136dp"
         android:fontFamily="sans-serif"
         android:text="Avaliação de restaurantes"
         android:textAlignment="center"
@@ -19,7 +20,6 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,70 +27,106 @@
         android:id="@+id/imageView"
         android:layout_width="93dp"
         android:layout_height="86dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dish" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="238dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="456dp"
-        android:text="Digite o nome do restaurante"
-        android:textColor="#050505"
+        android:layout_width="294dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="256dp"
+        android:text="Digite o nome do restaurante abaixo"
+        android:textColor="#383737"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="322dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="408dp"
-        android:ems="10"
-        android:hint="Restaurante"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/ratingRest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="52dp"
+        android:progressTint="#F6E01E"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvaliar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
+        android:layout_width="298dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="20dp"
         android:text="Avalie clicando nas estrelas abaixo"
         android:textColor="#090909"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintBottom_toTopOf="@+id/ratingRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomeRestaurante"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="175dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/btnAvaliar"
+        android:layout_width="186dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="156dp"
         android:text="Avaliar"
         android:textColor="#0B0B0B"
         android:textColorLink="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/textNomeRestaurante"
+        android:layout_width="372dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:autoText="true"
+        android:ems="10"
+        android:hint="Nome do restaurante"
+        android:inputType="text"
+        android:textColor="#101010"
+        android:textColorHint="#313030"
+        android:textColorLink="#050505"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="259dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="Avalie aquele restaurante que você foi!"
+        android:textColor="#6B6A6A"
+        android:textColorHighlight="#282626"
+        android:textColorHint="#0F0E0E"
+        android:textColorLink="#090909"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/mostrarRest"
+        android:layout_width="366dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="36dp"
+        android:text=" Restaurante: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
