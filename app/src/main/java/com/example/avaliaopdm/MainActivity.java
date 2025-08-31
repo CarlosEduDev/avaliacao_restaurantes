@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
             String nomeRestaurante = textNomeRestaurante.getText().toString();
-            String resultado = textResult.getText().toString();
 
                 if(nomeRestaurante.isEmpty()){
                     Toast.makeText(MainActivity.this, "O campo do nome do restaurante não pode ser vazio", Toast.LENGTH_SHORT).show();
